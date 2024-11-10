@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload page</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/status">Upload history</a></li>
+                <li><a href="/status">Status</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="transaction-form">
+            <h2>Upload your files in blockchain</h2>
+            <form action="/upload" method="POST" enctype="multipart/form-data" id="upload-form">
+                <div class="form-group">
+                    <label for="blockchainaddress">Your Blockchain address</label>
+                    <input type="text" id="blockchain-address" name="blockAddr" placeholder="Enter your Blockchain address">
+                </div>
+
+                <div class="form-group">
+                    <label for="recipient">Upload your files (.docx, .pdf):</label>
+                    <input type="file" id="file" name="file" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="key">Retrive Key:</label>
+                    <input type="text" id="key" name="rkey" placeholder="Enter your retrive key">
+                </div>
+
+                <div class="form-group">
+                    <label for="transactionType">Document Type:</label>
+                    <select id="transactionType" name="documentType">
+                        <option value="option" style="color:lightgray;">Select your document type</option>
+                        <option value="programming file">programming file</option>
+                        <option value="housing bond">housing bond</option>
+                        <option value="gold soverigin bond">gold soverigin bond</option>
+                        <option value="bussiness agreement">bussiness agreement</option>
+                        <option value="collectables">collectables</option>
+                        <option value="nft">NFT</option>
+                        <option value="others">other</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Upload</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 decentralised file uploading system</p>
+        </footer>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

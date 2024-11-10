@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Retrieve File</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Retrieve Your Uploaded File</h1>
+            <p>Enter your details to retrieve your file</p>
+        </header>
+
+        <form action="/retrieve" method="POST">
+            <label for="name">Blockchain address:</label>
+            <input type="text" id="name" name="name" placeholder = "enter your blockchain address" required>
+            <label for="name">Retrive key:</label>
+            <input type="text" id="rkey" name="rkey" placeholder ="enter your retrive key" required>
+            <button type="submit">Retrieve</button>
+        </form>
+
+        <div id="fileDisplay">
+            <% if (file) { %>
+                <h2>File for <%= rkey %>:</h2>
+                <% if (fileType === 'image') { %>
+                    <img src="/<%= file %>" alt="Uploaded File">
+                <% } else { %>
+                    <a href="/<%= file %>" download>Download your file</a>
+                <% } %>
+            <% } else if (error) { %>
+                <p><%= error %></p>
+            <% } %>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 decentralised file uploading system </p>
+        </footer>
+    </div>
+</body>
+</html>

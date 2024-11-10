@@ -1,0 +1,32 @@
+body {
+    background-color: #f8f9fa; /* Light background */
+    color: #343a40; /* Dark text */
+  }
+
+  .container {
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+
+  table {
+    border: 1px solid #dee2e6;
+  }
+
+  table thead {
+    background-color: #004d99;
+    color: #f1f1f1;
+  }
+
+
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  th, td {
+    text-align: center;
+    padding: 15px;
+  }
+ 
